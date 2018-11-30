@@ -27,10 +27,10 @@ DREDGE only requires a two-column NumPy array as its primary input (`coordinates
 | Variables                    | Explanations                                        | Default               |
 |:-----------------------------|:----------------------------------------------------|:----------------------|
 | coordinates                  | The spatial data as latitude-longitude coordinates  |                       |
-| neighbors                    | The number of nearest neighbors to get a bandwidth  | 10                    |
-| bandwidth                    | The bandwidth used for kernel density estimates     | None                  |
-| convergence                  | The threshold used for inter-iteration convergence  | 0.01                  |
-| percentage                   | The aimed-for percentage of highest-density ridges  | None                  |
+| neighbors (optional)         | The number of nearest neighbors to get a bandwidth  | 10                    |
+| bandwidth (optional)         | The bandwidth used for kernel density estimates     | None                  |
+| convergence (optional)       | The threshold used for inter-iteration convergence  | 0.01                  |
+| percentage (optional)        | The aimed-for percentage of highest-density ridges  | None                  |
 
 <br></br>
 
