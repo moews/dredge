@@ -13,12 +13,14 @@ Since DREDGE was initially developed to be applied to crime incident data, the d
 DREDGE can be installed via [PyPI](https://pypi.org), with a single command in the terminal:
 
 ```
-pip install scadda
+pip install dredge
 ```
 
 Alternatively, the file `dredge.py` can be downloaded from the folder `dredge` in this repository and used locally by placing the file into the working directory for a given project. An installation via the terminal is, however, highly recommended, as the installation process will check for the package requirements and automatically update or install any missing dependencies, thus sparing the user the effort of troubleshooting and installing them themselves.
 
 ### Quickstart guide
+
+DREDGE only requires a two-column NumPy array as its primary input (`coordinates`), with one data point per row, and latitude and longitude values in the columns. Four additional optional parameters can, however, be set: The number of nearest neighbors (`neighbors`) used to automatically calculate an optimal bandwidth can be manually changed, the bandwidth (`bandwidth`) itself can be forced to a certain value, and the threshold used to check for convergence between iterations can be set (`threshold`). The fourth parameter (`percentage`) unlocks an additional functionality of DREDGE, as the interest of practitioners is often constrained to high-density areas. For a user-provided percentage value _p_, the kernel density estimation in the tool's inner workings is used to only retain ridge points above the (100 - _p_)th percentile of the dataset's density landscape.
 
 <br></br>
 
@@ -37,6 +39,10 @@ After the installation via [PyPI](https://pypi.org), or using the `dredge.py` fi
 ```python
 from dredge import filaments
 
-filaments(coordinates = your_latitudes_and_longitudes,
-          percentage = your_top_density_percentage) 
+filaments(coordinates = your_coordinates,
+                        bandwidth = 0.1) 
 ```
+
+As an example, for homicide instances from the {Chicago Data Portal](https://data.cityofchicago.org/Public-Safety/Crimes-2001-to-present/ijzp-q8t2) from 2013 to 2017, the above call to the `filaments` function results in the ridges shown in red in the left-hand figure below, with homicide instances over the given time interval depicted in cyan. Additionally setting the input parameter `percentage` is set to a value of 5 to only retain values in regions above the 95th percentile of a kernel density estimate over the provided coordinates results in the right-hand figure.
+
+<img src="/example.png" alt="logo" width="600px"/>
