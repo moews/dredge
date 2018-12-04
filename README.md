@@ -1,6 +1,6 @@
 # DREDGE
 
-### Fast thresholded subspace-constrained mean shift for geospatial data
+### User-friendly thresholded subspace-constrained mean shift for geospatial data
 
 <img src="/logo.png" alt="logo" width="200px"/>
 
