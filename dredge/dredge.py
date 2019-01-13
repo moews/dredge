@@ -66,7 +66,10 @@ Here, the optional parameter 'percentage', which is explained above, is used.
 
 Author:
 --------
-
+Ben Moews
+Institute for Astronomy (IfA)
+School of Physics & Astronomy
+The University of Edinburgh
 
 References:
 -----------
