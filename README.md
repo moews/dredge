@@ -43,6 +43,6 @@ filaments(coordinates = your_coordinates,
                         bandwidth = 0.1) 
 ```
 
-As an example, for homicide instances from the [Chicago Data Portal](https://data.cityofchicago.org/Public-Safety/Crimes-2001-to-present/ijzp-q8t2) from 2013 to 2017, the above call to the `filaments` function results in the ridges shown in red in the left-hand figure below, with homicide instances over the given time interval depicted in cyan. Additionally, setting the input parameter `percentage` to a value of 5 to only retain values in regions above the 95th percentile of a kernel density estimate over the provided coordinates results in the right-hand figure.
+As an example, for UCR-defined Part I crimes from the [Chicago Data Portal](https://data.cityofchicago.org/Public-Safety/Crimes-2001-to-present/ijzp-q8t2) from 2018, the above call to the `filaments` function results in the ridges shown in red in the left-hand figure below, with 5,000 sampled crime instances over the given time interval depicted in cyan. Additionally, setting the input parameter `percentage` to a value of 5 to only retain values in regions above the 95th percentile of a kernel density estimate over the provided coordinates results in the right-hand figure.
 
 <img src="/visualization.png" alt="logo" width="600px"/>
