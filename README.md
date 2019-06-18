@@ -40,7 +40,7 @@ After the installation via [PyPI](https://pypi.org), or using the `dredge.py` fi
 from dredge import filaments
 
 filaments(coordinates = your_coordinates,
-                        bandwidth = 0.1) 
+                        percentage = 5) 
 ```
 
 As an example, for UCR-defined Part I crimes from the [Chicago Data Portal](https://data.cityofchicago.org/Public-Safety/Crimes-2001-to-present/ijzp-q8t2) from 2018, the above call to the `filaments` function results in the ridges shown in red in the left-hand figure below, with 5,000 sampled crime instances over the given time interval depicted in cyan. Additionally, setting the input parameter `percentage` to a value of 5 to only retain values in regions above the 95th percentile of a kernel density estimate over the coordinates results in the right-hand figure.
