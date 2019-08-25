@@ -8,6 +8,10 @@ DREDGE, short for _Density Ridge Estimation Describing Geospatial Evidence_, arg
 
 In essence, DREDGE provides density-based line points which optimize the distance to a dataset of coordinates along those lines, with larger bandwidths leading to a decrease in summed line length and an increase in the average distance to the nearest line. Since DREDGE was initially developed to be applied to crime incident data, the default bandwidth calculation follows a best-practice approach that is well-accepted within quantitative criminology, using the mean distance to a given number of nearest neighbors ([Williamson et al., 1999](http://www.esri.com/news/arcuser/0199/crimedata.html)). Since practitioners in that area of study are often interested in the highest-density regions of a dataset, the tool also features the possibility to specify a top-percentage level for a [kernel density estimate](https://en.wikipedia.org/wiki/Kernel_density_estimation) that the ridge points should fall within.
 
+If you use DREDGE or derivates based on it, please cite the following paper which introduced the tool:
+
+[Filaments of crime: Informing policing via thresholded ridge estimation](https://arxiv.org/abs/1907.03206)
+
 ### Installation
 
 DREDGE can be installed via [PyPI](https://pypi.org), with a single command in the terminal:
